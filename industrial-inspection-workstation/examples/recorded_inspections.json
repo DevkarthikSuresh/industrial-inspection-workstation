@@ -1,0 +1,44 @@
+{
+  "source": "Two actual inspection episodes in user-provided archive, with paths, IDs, hashes, embeddings, and timestamps omitted.",
+  "model": "gemini-3.5-flash-lite (original project default; model identifier not independently logged per episode)",
+  "records": [
+    {
+      "sample_image": "assets/samples/corroded-bolt.jpg",
+      "assessment": "REJECT",
+      "confidence_reported_by_model": 95,
+      "visual_evidence": "The current component in Image 2 shows a bolt with dark, heavy surface corrosion, pitting, and discoloration across the head, shank, and threads, which clearly deviates from the clean metallic silver finish of the known-good reference in Image 1.",
+      "uncertainty": "None regarding the presence of corrosion and surface degradation.",
+      "recommended_action": "Reject the component due to severe corrosion and surface degradation.",
+      "memory_metrics": {
+        "visual_drift": 0.173883,
+        "semantic_drift": 0.447238,
+        "cross_modal_similarity": 0.390682,
+        "concordance": "DISAGREEMENT",
+        "baseline": "known-good reference",
+        "visual_drift_threshold": 0.25,
+        "semantic_drift_threshold": 0.25,
+        "cross_modal_concordance_threshold": 0.35
+      },
+      "note": "Sanitized snapshot from original saved inspection state; not verified ground truth or benchmark performance."
+    },
+    {
+      "sample_image": "assets/samples/fractured-bolt.jpg",
+      "assessment": "REJECT",
+      "confidence_reported_by_model": 100,
+      "visual_evidence": "The current component image clearly shows the bolt sheared completely into two pieces with severe brittle-type fracture surfaces and extensive longitudinal and transverse surface cracking propagating along both the smooth shank and the threaded sections.",
+      "uncertainty": "None",
+      "recommended_action": "Quarantine the component immediately and reject it from service due to catastrophic structural failure.",
+      "memory_metrics": {
+        "visual_drift": 0.192296,
+        "semantic_drift": 0.495509,
+        "cross_modal_similarity": 0.482685,
+        "concordance": "DISAGREEMENT",
+        "baseline": "known-good reference",
+        "visual_drift_threshold": 0.25,
+        "semantic_drift_threshold": 0.25,
+        "cross_modal_concordance_threshold": 0.35
+      },
+      "note": "Sanitized snapshot from original saved inspection state; not verified ground truth or benchmark performance."
+    }
+  ]
+}
