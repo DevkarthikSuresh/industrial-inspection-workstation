@@ -254,9 +254,6 @@ The offline test harness mocks Gemini calls and verifies persistence, hashes, dr
 
 ---
 
-<div align="center">
-
-<b>INSPECT  ·  VERIFY  ·  REMEMBER</b>
 
 <sub>Research / engineering prototype • Built for transparent, evidence-aware visual inspection</sub>
 
