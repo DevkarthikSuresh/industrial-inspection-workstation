@@ -22,7 +22,7 @@
 
 ---
 
-## ✦ The idea
+## Introduction
 
 A single image can be misleading. Lighting can resemble a crack. A hidden thread can look undamaged. A model can be confident for the wrong reason.
 
@@ -35,7 +35,7 @@ The system also retains batch-scoped episodes, image/rationale embeddings, drift
 <tr><td><b>03 / Industrial memory</b><br/>Append-only episodes, SHA-256 image integrity, production batches, and visual/semantic drift metrics.</td><td><b>04 / Evidence-gated overrides</b><br/>The original claim is reconsidered only with adequate new evidence and a sufficiently confident refutation.</td></tr>
 </table>
 
-## ◇ Sample inspection imagery
+## Sample inspection imagery
 
 <img src="assets/branding/sample-comparison.jpg" alt="Supplied sample imagery: intact bolt and visibly fractured bolt" width="100%" />
 
@@ -53,7 +53,7 @@ The system also retains batch-scoped episodes, image/rationale embeddings, drift
 </table>
 </details>
 
-## ↗ Recorded inspection snapshots
+## Recorded inspection snapshots
 
 The supplied archive included two actual saved inference episodes. Here are their **model-reported outputs**, not reconstructed or estimated performance figures:
 
@@ -64,7 +64,7 @@ The supplied archive included two actual saved inference episodes. Here are thei
 
 **Why the disagreement?** Semantic drift crossed its prototype threshold while visual drift did not. That is a memory diagnostic, *not* evidence that either classification is wrong. Two recorded cases cannot establish accuracy. [Examine the original recorded rationales and metrics →](docs/RECORDED_RUNS.md)
 
-## ⌁ How it works
+##  How it works
 
 ```mermaid
 flowchart LR
@@ -105,7 +105,7 @@ Original rationale → explicit claim
 
 A separate adequacy gate requires confidence **≥ 70**. These are configured prototype thresholds, not validated production safety limits. See the [technical architecture](docs/ARCHITECTURE.md).
 
-## ⚡ Quick start
+##  Quick start
 
 **Prerequisites:** Python 3.10+, a Gemini API key for live inference, and an internet connection for API requests. The supplied YOLOv8n weights are local. You can run the offline tests without a key. The two model identifiers have been checked against the [Gemini model documentation](https://ai.google.dev/gemini-api/docs/models).
 
@@ -152,7 +152,7 @@ python app.py
 ```
 </details>
 
-## ⌨ CLI walkthrough
+##  CLI walkthrough
 
 Use `--no-yolo` to bypass generic object detection and run contour-based localization instead.
 
@@ -191,7 +191,7 @@ python main.py override --inspection-id YOUR_INSPECTION_ID --operator operator_0
 
 > An override requires genuinely relevant evidence; it is not a guarantee that an original decision will change. Paths in the examples are illustrative where indicated.
 
-## ▦ Repository map
+##  Repository map
 
 ```text
 industrial-inspection-workstation/
@@ -222,7 +222,7 @@ industrial-inspection-workstation/
 
 Local inspection state (`industrial_memory.json`, `reference_images/`, `memory_archive/`, `runtime/`) is created on demand and excluded from Git; **sample imagery is deliberately separate from operator data**.
 
-## ✓ Validation
+##  Validation
 
 ```bash
 python -m compileall -q app.py main.py check_setup.py industrial_inspection tests
@@ -233,7 +233,7 @@ The offline test harness mocks Gemini calls and verifies persistence, hashes, dr
 
 **Interpretation matters:** these are workflow and logic tests, not an accuracy evaluation of a deployed defect classifier. The supplied archive contained two saved inspection episodes but no reproducible comparative benchmark or calibration dataset, so no accuracy, precision, or speed claims are made here. Read [validation details](docs/VALIDATION.md).
 
-## ⚙ Configuration & caveats
+##  Configuration & Footnotes
 
 | Setting | Default | Meaning |
 | --- | --- | --- |
